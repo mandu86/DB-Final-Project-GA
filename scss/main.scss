@@ -1,0 +1,218 @@
+/* 
+Project Name: General Assembly
+Client: Duncan
+Author: Duncan
+*/
+
+
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark:400,700');
+@import url('http://www.involvedmanagement.com/img/moment.jpg');
+
+/******************************************
+/* COLOURS
+/*******************************************/
+
+/* add a list of colours used in the project */
+
+$brand-color: white; 
+$brand-color: blue;
+
+// body { 
+//      color: darken( $brand-color, 20% );
+//      filter: saturate ( 0.5 );
+// }
+
+
+
+/******************************************
+/* SENSIBLE DEFAULTS                   
+/*******************************************/
+
+* {
+     box-sizing: border-box;
+}
+img {
+	max-width:100%;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+$Palanquin: 'Palanquin Dark', sans-serif;
+$Arialblack: 'Arial Black', sans-serif;
+
+@font-face {
+    font-family: "Arial";
+    // src: url("fonts/Samplino.eot?") format("eot"),
+    //      url("fonts/Samplino.woff2") format("woff2"),
+    //      url("fonts/Samplino.woff") format("woff"),
+         src: url("fonts/Arial Black.ttf") format("truetype");
+         // url("fonts/Samplino.svg#Samplino") format("svg");
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+html { 
+  background: url('http://www.involvedmanagement.com/img/moment.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.site-container {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+}
+
+header {
+}
+
+// tomorrow!!!!
+
+.site-nav {
+     //position
+     display: block;
+     width: 100%;
+     position: fixed;
+     //font
+     font-family: $Palanquin;
+     text-decoration: none;
+     color: white;
+     padding: 5px 10px 5px 10px;
+}
+
+header a {
+     //position
+     float: right;
+     width: 75px;
+     margin-right: 35px;
+     margin-top: 20px;
+     padding: 8px;
+     background-color: grey;
+     //font
+     text-decoration: none;
+     text-align: center;
+     color: white;
+     
+}
+
+.artist-nav {
+     clear: right;
+     background-color: black;
+     max-width: 25%;
+     background: rgba(0, 0, 0, 0.5);
+}
+
+.artist-nav ul {
+     //position
+     margin: 0px;
+     padding: 30px;
+     border: 1px solid white;
+     color: white;
+     //font
+     text-align: center;
+     font-size: 1.5em;
+     font-family: $Arialblack;
+     font-weight: 700;
+}
+
+.im-logo {
+     //position
+     background-color: black;
+     max-width: 30%;
+     position: fixed;
+     float: right;
+     clear: left;
+     right: 0;
+     bottom: 50px;
+     //font
+     font-family: $Arialblack;
+     font-weight: 700;
+     color: white;
+     font-size: 2em;
+     padding: 10px 50px 10px 30px
+}
+
+.im-logo p {
+     margin: 0px;
+}    
+
+.site-footer {
+     position: absolute, fixed;
+     bottom: 0;
+     margin: auto;
+}
+
+ul:hover {
+    background-color: white;
+    color: black; 
+}
+
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media only screen and (max-width: 800px) {
+
+            header a {
+               // float: left;
+               display: none;
+           }
+
+          
+          .im-logo {
+               display: none;
+          }
+
+         .artist-nav {
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                margin-bottom: auto;
+                clear: left;
+          }
+
+          .site-footer {
+               display: none;
+          }
+
+          
+}
+
+/******************************************
+/* HELPER CLASSES
+/*******************************************/
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+     content: " ";
+     display: table;
+}
+.clearfix:after {
+     clear:both;
+}
+
+.is-hidden {
+     display: none;
+}
+.is-visible {
+     display: block;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+
+
